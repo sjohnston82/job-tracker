@@ -1,0 +1,50 @@
+.profile-details__container {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include mq("tablet-wide") {
+    width: 85vw;
+    @include box-shadow(3px, 8px);
+    background: rgb(17, 17, 17);
+    background: linear-gradient(
+      135deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(46, 45, 49, 1) 100%
+    );
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1.75fr 1.75fr 0.5fr 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  @include mq("desktop-xl") {
+    width: 70vw;
+  }
+
+  &__header-text {
+    margin-bottom: 1rem;
+  }
+}
+
+.profile-update-grp {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0 0;
+
+  @include mq("tablet-wide") {
+    grid-area: 4 / 2 / 5 / 4;
+  }
+
+  &__btn {
+    @include button;
+    margin-bottom: 1rem;
+    width: 40%;
+    font-size: 1.2rem;
+
+    @include mq("tablet-wide") {
+      font-size: 1.5rem;
+    }
+  }
+}

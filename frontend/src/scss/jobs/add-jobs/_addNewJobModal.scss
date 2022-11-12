@@ -1,0 +1,20 @@
+.modal-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: slategray;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+

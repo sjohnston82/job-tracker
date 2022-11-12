@@ -1,0 +1,70 @@
+.main-div {
+  padding-top: 5.5rem;
+  position: relative;
+  min-height: 95vh;
+
+  @include mq("tablet-wide") {
+    padding-top: 1.5rem;
+  }
+
+  .upper-btn-group {
+    display: none;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: none;
+  flex-flow: column nowrap;
+  position: relative;
+  min-height: 100%;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bg {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
+
+.footer-bg-landing {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $item-color;
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
+
+.job-wrapper {
+  @include mq("tablet-wide") {
+    width: 90vw;
+    margin: 2rem auto 0 auto;
+    background-color: #111111;
+    @include box-shadow(3px, 8px);
+    border-radius: 10px;
+    padding: 1rem 0;
+  }
+
+  @include mq("desktop-wide") {
+    width: 85vw;
+  }
+}

@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400&family=Oswald&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Titillium+Web:wght@200;400;700&display=swap");
+
+@import "config";
+@import "responsive";
+
+@import "pages/mainPage";
+@import "pages/contact";
+@import "pages/landing/landing";
+@import "pages/profile/profile";
+@import "pages/profile/accountInfo";
+@import "pages/profile/accountStats";
+@import "pages/profile/avatarGroup";
+
+@import "jobs/job-list/jobList";
+@import "jobs/job-list/jobSort";
+@import "jobs/job-list/listingStatus";
+@import "jobs/job-list/searchClear";
+
+@import "jobs/jobCard";
+@import "jobs/locationSelect";
+
+@import "jobs/details/jobDetails";
+@import "jobs/details/jobDetailsDocuments";
+@import "jobs/details/uploadNewDocument";
+@import "jobs/details/stepsContainer";
+@import "jobs/details/notes";
+
+@import "jobs/add-jobs/addNewJob";
+@import "jobs/add-jobs/addNewJobModal";
+@import "jobs/add-jobs/add-documents";
+
+@import "layout/nav";
+@import "layout/searchbar";
+@import "layout/spinners";
+@import "layout/pagination";
+@import "layout/upperButtonGroupMobile";
+
+:root {
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  @include mq("phone-wide") {
+    font-size: 18px;
+  }
+
+  @include mq("desktop") {
+    font-size: 20px;
+  }
+  @include mq("desktop-wide") {
+    font-size: 22px;
+  }
+  @include mq("desktop-xl") {
+    font-size: 24px;
+  }
+  @include mq("super-wide") {
+    font-size: 26px;
+  }
+}
+
+p {
+  font-size: 1rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.title-accent {
+  color: $accent-color;
+}
+
+.center-content {
+  padding-top: 0.5rem;
+}

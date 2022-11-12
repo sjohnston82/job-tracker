@@ -1,0 +1,117 @@
+.sort-icon-wrapper {
+  justify-content: flex-end;
+  display: flex;
+  padding: 0 0.2rem;
+  width: 2.5rem;
+  border-radius: 7px;
+  box-shadow: 0 3px 6px black;
+  background-color: $secondary-color;
+  align-items: center;
+  height: 2.5rem;
+  margin-right: 10vw;
+}
+
+.sort-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  justify-content: flex-end;
+  margin-top: -0.2rem;
+  width: 100%;
+
+  .sort-select-grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .sort-container__select {
+    background-color: $item-color;
+    border-radius: 5px;
+    margin-left: 0.3rem;
+    color: $grey-200;
+  }
+
+  .sort-icon {
+    font-size: 2rem;
+    margin-left: auto;
+    margin-top: 1rem;
+  }
+
+  .hide-sort-btn {
+    @include button;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  }
+
+  select {
+    background-color: $secondary-color;
+    color: $grey-300;
+  }
+}
+
+// large screens
+
+.sort-container-lg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.sort-btn-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 80vw;
+
+  .sort-btn-lg {
+    @include button;
+    color: $grey-200;
+    margin-bottom: 1rem;
+    padding: 0.2rem 0.5rem;
+
+    @include mq("desktop") {
+      font-size: 1rem;
+    }
+  }
+
+  .active {
+    color: $accent-color;
+  }
+
+  #oldest {
+    grid-column: 1;
+  }
+
+  #newest {
+    grid-column: 2;
+  }
+
+  #title {
+    grid-column: 3;
+  }
+
+  #company {
+    grid-column: 4;
+  }
+
+  #status-up {
+    grid-column: 5;
+  }
+
+  #status-down {
+    grid-column: 6;
+  }
+}
+
+.sort-text {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}

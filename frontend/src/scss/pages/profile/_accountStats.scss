@@ -1,0 +1,50 @@
+.account-stats {
+  @include box-shadow(2px, 4px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90vw;
+  gap: 1rem;
+  margin: 0 auto 0 auto;
+  background-color: $secondary-color;
+  padding: 1rem;
+  border-radius: 7px;
+  text-align: center;
+
+  @include mq("phone-wide") {
+    width: 80vw;
+  }
+
+  @include mq("tablet-small") {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include mq("tablet-wide") {
+    @include box-shadow(2px, 8px);
+    grid-area: 3 / 1 / 4 / 5;
+    width: 90%;
+    height: 100%;
+    background-color: #111111;
+    margin: 0 auto;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__stat-container {
+    @include mq("tablet-wide") {
+      @include box-shadow(3px, 8px);
+      background-color: $item-color;
+      border-radius: 10px;
+      padding: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__title {
+    text-decoration: underline;
+  }
+}

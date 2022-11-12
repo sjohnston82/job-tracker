@@ -1,0 +1,31 @@
+.listing-status-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  margin: 1rem auto;
+
+  @include mq("tablet-wide") {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  hr {
+    border: 1px solid $grey-200;
+    width: 10%;
+    flex: 1;
+
+    @include mq("desktop-wide") {
+      flex: 2;
+    }
+  }
+
+  .listing-status-text {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0 1rem;
+    flex: 1;
+  }
+}

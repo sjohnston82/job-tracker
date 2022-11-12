@@ -1,0 +1,178 @@
+.job-details__documents {
+  margin: 1.6rem 0;
+  background-color: $item-color;
+  width: 100vw;
+  padding: 1rem 0;
+
+  @include mq("tablet-wide") {
+    @include box-shadow(3px, 8px);
+    grid-area: 3 / 1 / 4 / 4;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: linear-gradient(
+      135deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(46, 45, 49, 1) 100%
+    );
+  }
+
+  .documents-header-text {
+    @include mq("tablet-wide") {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.job-details__document-container {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: row;
+  width: 100%;
+  gap: 0.5rem;
+  margin: 0 auto 1rem auto;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+  @include mq("tablet-wide") {
+    margin-top: 1.5rem;
+  }
+
+  &__document-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .job-details__document-title {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .job-details__document-status {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.project-url__container {
+  @include box-shadow(3px, 4px);
+  width: 90vw;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  gap: 0.5rem;
+  background-color: $background-color;
+  padding: 0.5rem;
+  border-radius: 7px;
+
+  @include mq("tablet") {
+    width: 60%;
+  }
+}
+
+.project-url__input {
+  height: 1.8rem;
+  width: 30rem;
+  border: 1px solid $text-color;
+  border-radius: 555px;
+  background-color: $grey-300;
+
+  &::-webkit-input-placeholder {
+    color: $grey-900;
+  }
+
+  &::-moz-placeholder {
+    color: $grey-900;
+  }
+
+  &:-ms-input-placeholder {
+    color: $grey-900;
+  }
+
+  &::-ms-input-placeholder {
+    color: $grey-900;
+  }
+
+  &::placeholder {
+    color: $grey-900;
+  }
+}
+
+.save-project-container {
+  @include box-shadow(3px, 4px);
+  background-color: #111111;
+  width: 45%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  border-radius: 555px;
+  border: 1px solid $grey-200;
+
+  @include mq("tablet-wide") {
+    width: 90%;
+  }
+
+  .save-project-input {
+    border-radius: 555px;
+    width: 90%;
+    padding: 0.5rem 0.6rem;
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    background-color: $grey-300;
+
+    &::-webkit-input-placeholder {
+      color: black;
+    }
+
+    &::-moz-placeholder {
+      color: black;
+    }
+
+    &:-ms-input-placeholder {
+      color: black;
+    }
+
+    &::-ms-input-placeholder {
+      color: black;
+    }
+
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  .save-project-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+
+    .save-project-btn {
+      @include button;
+      margin-bottom: 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.job-details__upload-btn-project-x {
+  background-color: $background-color;
+  color: $text-color;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}

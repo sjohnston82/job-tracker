@@ -1,0 +1,142 @@
+.notes-wrapper {
+  @include mq("tablet-wide") {
+    grid-area: 3 / 4 / 4 / 7;
+    // max-height: 100%;
+  }
+}
+
+.notes {
+  @include box-shadow(3px, 8px);
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto 0 auto;
+  background: linear-gradient(
+    135deg,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(46, 45, 49, 1) 100%
+  );
+  width: 90vw;
+  border-radius: 10px;
+
+  @include mq("tablet-wide") {
+    width: 100%;
+    margin-top: 0;
+    margin-right: 1rem;
+  }
+
+  .notes-header-container {
+    display: flex;
+    position: relative;
+    margin-top: 0.5rem;
+
+    .notes-header {
+      margin: 0 auto;
+      font-size: 1.2rem;
+    }
+
+    .delete-notes-toggle-btn {
+      color: $accent-color;
+      margin: 0;
+      padding: 0.4rem;
+      position: absolute;
+      top: -12%;
+      right: 2%;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+    }
+  }
+
+  .notes-container {
+    border: 1px solid $grey-400;
+    width: 96%;
+    height: 10rem;
+    max-height: 15rem;
+    margin: 0.5rem auto;
+    background-color: #111111;
+    overflow-y: scroll;
+    word-wrap: break-word;
+
+    .notes-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .text-check-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $background-color;
+        padding: 0.5rem;
+        margin: 0.5rem auto;
+        width: 90%;
+        border-radius: 10px;
+        word-wrap: break-word;
+
+        .note-text {
+          text-align: left;
+          margin-left: 1.5rem;
+          max-width: 37ch;
+          font-size: 1.1rem;
+
+          &:before {
+            content: "";
+            display: inline-block;
+            height: 0.8em;
+            width: 1em;
+            margin-left: -1.1rem;
+            background-image: url("../../images/list-arrow-right-yellow.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+
+        .note-time {
+          display: flex;
+          font-size: 0.7rem;
+          margin: 0.5rem auto 0 auto;
+          width: 100%;
+        }
+
+        .delete-note-checkbox {
+          margin-right: 1rem;
+        }
+      }
+
+      .note-divider {
+        color: $grey-200;
+      }
+    }
+  }
+
+  .notes-btn-grp {
+    .add-note-btn-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+    .add-note-btn {
+      @include button;
+      font-size: 1rem;
+      margin: 0.3rem;
+    }
+
+    .delete-note-btn {
+      @include button;
+      font-size: 1rem;
+    }
+  }
+
+  .notes-input {
+    .new-note-input {
+      width: 80%;
+      background-color: $item-color;
+      color: $grey-200;
+      font-size: 0.9rem;
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+.job-card {
+  @include box-shadow(3px, 13px);
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: $item-color;
+  background-image: linear-gradient($background-color, $item-color);
+
+  @include mq("tablet-small") {
+    max-height: 19rem;
+    overflow: hidden;
+    width: 95%;
+    margin: 0;
+  }
+
+  &__upper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Titillium Web";
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
+    font-weight: 400;
+
+    @include mq("tablet-small") {
+      font-size: 1rem;
+    }
+  }
+
+  &-no-border {
+    border: none;
+  }
+
+  .card-info-header {
+    text-decoration: underline;
+    font-size: 1.2rem;
+
+    @include mq("tablet-small") {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__company {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 0 0.3rem 0 0.3rem;
+    font-weight: normal;
+
+    @include mq("tablet-small") {
+      font-size: 1rem;
+    }
+  }
+
+  &__date-applied {
+    font-weight: normal;
+  }
+
+  &__details-toggler-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    visibility: hidden;
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 0 1rem;
+
+    @include mq("tablet-small") {
+      width: 120%;
+      justify-content: space-between;
+    }
+  }
+
+  &__btn-container-archive {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    button {
+      margin-right: 0.2rem;
+      margin-left: 0.2rem;
+    }
+  }
+
+  &__delete-btn {
+    @include box-shadow(2px, 3px);
+    background-color: red;
+    color: white;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    margin: 0.5rem auto 0.5rem auto;
+  }
+
+  &__show-details-btn {
+    @include box-shadow(3px, 8px);
+    background-color: $background-color;
+    color: $accent-color;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 0.5rem auto 0.5rem auto;
+    border-radius: 5px;
+
+    @include mq("tablet-wide") {
+      &:hover {
+      @include shrink;
+    }
+    }
+
+    @include mq("desktop-wide") {
+      font-size: .8rem;
+    }
+  }
+
+  .days-since-application-green {
+    background-color: green;
+  }
+
+  .days-since-application-yellow {
+    background-color: yellow;
+  }
+
+  .days-since-application-red {
+    background-color: red;
+    color: white;
+  }
+
+  &__details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    a,
+    h5 {
+      text-align: center;
+    }
+  }
+}
+
+.job-card-no-border {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.job-card__status {
+  font-size: 1rem;
+}

@@ -1,0 +1,51 @@
+.documents {
+  // width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+
+  .documents-header {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  &__input-wrapper {
+    margin: 0.5rem auto 0 auto;
+    background-color: $background-color;
+    border-radius: 10px;
+    width: 40vw;
+    
+    @include mq("tablet-small") {
+      width: 30vw;
+    }
+    
+    @include mq("tablet-wide") {
+      justify-content: space-between;
+      width: 18vw;
+    }
+  }
+
+  &__input-container {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    align-content: center;
+    align-items: center;
+    padding: 0.5rem;
+
+    @include mq("tablet-wide") {
+      justify-content: space-between;
+    }
+
+    .documents-label {
+      width: 100%;
+      font-size: 0.9rem;
+
+    }
+    
+    .new-job-checkbox {
+      width: 20%;
+    }
+  }
+}

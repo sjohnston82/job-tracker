@@ -1,0 +1,62 @@
+.job-details__steps-container {
+  @include box-shadow(3px, 18px);
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 3rem auto 0.5rem auto;
+  border: 1px solid $grey-200;
+  border-radius: 10px;
+  background-color: $secondary-color;
+
+  @include mq("tablet-wide") {
+    grid-area: 2 / 5 / 3 / 7;
+    width: 95%;
+    margin: 0.8rem auto 0 auto;
+    padding: 0;
+    background: rgb(17, 17, 17);
+    background: linear-gradient(
+      135deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(46, 45, 49, 1) 100%
+    );
+  }
+
+  h6 {
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+
+    @include mq("phone-wide") {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .steps-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    button {
+      @include button;
+      font-size: 1rem;
+    }
+  }
+
+  .steps-active {
+    .rs-steps-item-title {
+      color: $grey-200;
+    }
+    .rs-steps-item-description {
+      color: $accent-color;
+    }
+  }
+}
+
+.steps-steps {
+  @include mq("desktop-wide") {
+    font-size: 1rem;
+  }
+}

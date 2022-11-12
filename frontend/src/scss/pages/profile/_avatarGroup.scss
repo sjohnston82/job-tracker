@@ -1,0 +1,142 @@
+.avatar-grp-wrapper {
+  display: flex;
+  width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  justify-content: center;
+
+  @include mq("tablet-wide") {
+    grid-area: 1 / 1 / 2 / 5;
+    width: 100%;
+  }
+
+  .bg-avatar-upload {
+    width: 100vw;
+    background-color: $secondary-color;
+    height: 10.5rem;
+    z-index: -1;
+    position: absolute;
+    top: 26%;
+  }
+
+  .avatar-group {
+    position: absolute;
+    top: 15%;
+
+    @include mq("tablet-wide") {
+      top: 10%;
+      background-color: $secondary-color;
+      border-radius: 50%;
+    }
+
+    .avatar-upload-btn {
+      position: absolute;
+      left: 72%;
+      top: 80%;
+      background-color: $grey-700;
+      color: $text-color;
+      padding: 0.3rem 0.5rem;
+      border-radius: 50%;
+      box-shadow: 0px 0px 1px 1px black;
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+
+      &__icon {
+        font-size: 1.2rem;
+        color: $text-color;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}
+
+.profile-details__name-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #111111;
+  width: 100vw;
+  height: 11rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+
+  @include mq("tablet-wide") {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .upload-avatar-btn-grp {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+
+    .avatar-btn {
+      @include button;
+      font-size: 1rem;
+      padding: 0.4rem 0.6rem;
+    }
+  }
+
+  input {
+    display: none;
+
+    + label {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0;
+      border-radius: 100%;
+      background: #ffffff;
+      border: 1px solid #d2d6de;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      font-weight: normal;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  img {
+    max-width: 13rem;
+    min-width: 13rem;
+    max-height: 13rem;
+    min-height: 13rem;
+    border-radius: 50%;
+    border: 4px solid black;
+    position: relative;
+
+    @include mq("tablet-wide") {
+      max-width: 15rem;
+      min-width: 15rem;
+      max-height: 15rem;
+      min-height: 15rem;
+    }
+  }
+
+  .profile-details__loading {
+    display: flex;
+    background-color: $background-color;
+    max-width: 13rem;
+    min-width: 13rem;
+    max-height: 13rem;
+    min-height: 13rem;
+    border-radius: 50%;
+    border: 4px solid black;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include mq("tablet-wide") {
+      max-width: 15rem;
+      min-width: 15rem;
+      max-height: 15rem;
+      min-height: 15rem;
+    }
+  }
+
+  .displayName {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

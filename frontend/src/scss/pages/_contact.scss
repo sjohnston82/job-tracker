@@ -1,0 +1,219 @@
+.contact {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  padding-top: 5.5rem;
+
+  @include mq("tablet-wide") {
+    padding-top: 3rem;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto 2rem auto;
+
+    &__text {
+      font-size: 2rem;
+      color: $accent-color;
+      padding-bottom: 0.5rem;
+    }
+
+    &__subtext {
+      font-size: 1.2rem;
+
+      @include mq("tablet-wide") {
+        width: 50%;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__form {
+    @include box-shadow(3px, 8px);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: $item-color;
+    width: 80%;
+    border-radius: 7px;
+    margin: 0 auto;
+
+    @include mq("tablet") {
+      width: 60%;
+    }
+
+    @include mq("desktop") {
+      width: 35%;
+    }
+
+    @include mq("desktop-xl") {
+      width: 25%;
+    }
+
+    &__input-grp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__span {
+        flex: 1;
+        margin: 0 1rem 0 0;
+        max-width: 5%;
+      }
+
+      .contact-icon {
+        font-size: 1.7rem;
+      }
+    }
+
+    &__input {
+      border-radius: 555px;
+      padding: 0.3rem 0.3rem;
+      background-color: $grey-300;
+      color: black;
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+      padding: 0.5rem 0.5rem;
+      flex-grow: 2;
+
+      &::-webkit-input-placeholder {
+        color: $grey-700;
+      }
+
+      &::-moz-placeholder {
+        color: $grey-700;
+      }
+
+      &:-ms-input-placeholder {
+        color: $grey-700;
+      }
+
+      &::-ms-input-placeholder {
+        color: $grey-700;
+      }
+
+      &::placeholder {
+        color: $grey-700;
+      }
+    }
+
+    &__message {
+      border-radius: 10px;
+      margin: 1rem 0 1rem 0;
+      background-color: $grey-300;
+      color: black;
+      padding: 0.3rem;
+      min-height: 7rem;
+
+      &::-webkit-input-placeholder {
+        color: $grey-700;
+      }
+
+      &::-moz-placeholder {
+        color: $grey-700;
+      }
+
+      &:-ms-input-placeholder {
+        color: $grey-700;
+      }
+
+      &::-ms-input-placeholder {
+        color: $grey-700;
+      }
+
+      &::placeholder {
+        color: $grey-700;
+      }
+    }
+
+    &__button {
+      @include button;
+      width: 30%;
+      border-radius: 555px;
+
+      @include mq("tablet-wide") {
+        width: 40%;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .contact-hr {
+    color: $grey-200;
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 1.5rem auto 1rem auto;
+    text-align: center;
+
+    @include mq("desktop-xl") {
+      width: 60%;
+    }
+
+    &__header {
+      font-size: 1rem;
+
+      @include mq("tablet-wide") {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__personal {
+      @include box-shadow(3px, 8px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $item-color;
+      padding: 0.5rem;
+      border-radius: 7px;
+      font-size: 1rem;
+      margin: 1.5rem auto 1rem auto;
+
+      @include mq("tablet-wide") {
+        font-size: 1.1rem;
+        width: 50%;
+        padding: 1rem;
+      }
+
+      @include mq("desktop") {
+        width: 40%;
+      }
+
+      &__icon {
+        font-size: 1.4rem;
+        margin: 0 0.5rem 0 0.5rem;
+
+        @include mq("tablet-wide") {
+          font-size: 1.8rem;
+        }
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: row;
+        padding: 0.2rem 0;
+      }
+
+      .social-media-icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0.5rem 0;
+
+        .social-media-icon {
+          width: 3rem;
+        }
+      }
+    }
+  }
+}

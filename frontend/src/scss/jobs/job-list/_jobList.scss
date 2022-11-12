@@ -1,0 +1,87 @@
+.job-list-container {
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: column;
+  justify-content: center;
+
+  &__archive-return {
+    @include button;
+    padding: 0.5rem 0.75rem;
+    border-radius: 555px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    @include mq("tablet-small") {
+    }
+  }
+
+  .no-active-text {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0 3rem;
+    margin: 2rem 0 0 0;
+
+    @include mq("tablet-small") {
+      width: 60%;
+      margin: 2rem auto 0 auto;
+    }
+
+    @include mq("tablet-wide") {
+      margin: 1rem auto;
+    }
+  }
+
+  .no-archive-text {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+
+  .job-list-container__list {
+    display: flex;
+    gap: 0.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex-wrap: wrap;
+
+    @include mq("tablet-small") {
+      flex-direction: row;
+    }
+
+    @include mq("tablet-wide") {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .job-sort__container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+
+  .job-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    @include mq("tablet-wide") {
+      width: 28vw;
+    }
+
+    @include mq("desktop-wide") {
+      width: 20vw;
+    }
+  }
+}

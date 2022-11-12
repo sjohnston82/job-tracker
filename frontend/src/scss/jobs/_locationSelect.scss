@@ -1,0 +1,153 @@
+.location-container {
+  margin: 1.5rem auto;
+
+  h5 {
+    text-align: center;
+  }
+
+  .location-value {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .location-input-container {
+    display: flex;
+    flex-direction: column;
+    @include mq("tablet-wide") {
+      width: 25%;
+    }
+  }
+}
+
+.remote-btn-grp {
+  display: flex;
+  justify-content: center;
+  width: 45vw;
+  gap: 0.5rem;
+  margin: 0 auto 1rem auto;
+  flex-direction: column;
+  text-align: center;
+
+  @include mq("phone-wide") {
+    width: 35vw;
+  }
+
+  @include mq("tablet-small") {
+    width: 25vw;
+  }
+
+  @include mq("tablet-wide") {
+    width: 20vw;
+    margin-bottom: 0;
+  }
+
+  .remote-btn-wrapper {
+    display: flex;
+  }
+
+  .location-remote-btn {
+    @include button;
+    font-size: 1.1rem;
+  }
+}
+
+.remote-btn-grp-details {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  gap: 0.5rem;
+  margin: 0 auto 1rem auto;
+  flex-direction: row;
+  text-align: center;
+
+  @include mq("tablet-small") {
+    width: 30%;
+  }
+
+  @include mq("tablet-wide") {
+    width: 50%;
+  }
+
+  .remote-btn-wrapper {
+    display: flex;
+  }
+
+  .location-remote-btn {
+    @include button;
+    font-size: 1.1rem;
+  }
+}
+
+.location-input {
+  margin: 0.3rem auto 0 auto;
+
+  & input::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+  & input::-moz-placeholder {
+    text-align: center;
+  }
+
+  & input:-ms-input-placeholder {
+    text-align: center;
+  }
+
+  & input::-ms-input-placeholder {
+    text-align: center;
+  }
+
+  & input::placeholder {
+    text-align: center;
+  }
+}
+
+.change-remote {
+  background-color: transparent;
+  color: $text-color;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: $primary-color-light;
+}
+
+.padding-tb {
+  margin: 0.5rem 0;
+}
+
+.remote-change {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  button {
+    font-size: 0.8rem;
+  }
+}
+
+.country-select {
+  border-radius: 555px;
+  width: 90%;
+  padding: 0.3rem 0.4rem;
+  background-color: $grey-300;
+  color: black;
+  font-weight: bold;
+}
+
+option {
+  width: 10ch;
+}
+
+.city-input {
+  border-radius: 555px;
+  width: 90%;
+  padding: 0.3rem 0.4rem;
+  background-color: $grey-300;
+  color: black;
+  font-weight: bold;
+}
+
+.undo-remote {
+  background-color: transparent;
+  color: $primary-color-light;
+  text-decoration: underline;
+}
