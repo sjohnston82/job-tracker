@@ -34,12 +34,12 @@ const Profile = () => {
     };
   };
 
-  const handleSubmitFile = async (e, file) => {
+  const handleSubmitFile = (e, file) => {
     e.preventDefault();
     setLoading(true);
     if (!previewSource) return;
 
-    const res = await fetch(`${URL}/users/upload/avatar/`, {
+    const res = fetch(`${URL}/users/upload/avatar/`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ data: file, email: userData.email }),
@@ -54,7 +54,6 @@ const Profile = () => {
       .catch((error) => {
         console.log(error);
       });
-
     showToast(res, "uploading-avatar");
   };
 

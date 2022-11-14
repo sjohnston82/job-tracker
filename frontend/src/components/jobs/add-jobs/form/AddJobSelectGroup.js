@@ -18,6 +18,10 @@ const AddJobSelectGroup = (props) => {
           <option value="Indeed">Indeed</option>
           <option value="AngelsList">AngelsList</option>
           <option value="LinkedIn">LinkedIn</option>
+          <option value="Dice">Dice</option>
+          <option value="ZipRecruiter">ZipRecruiter</option>
+          <option value="Other Job Site">Another Job Site</option>
+          <option value="Company's Career Page">Company's Careers Page</option>
           <option value="Other">Other</option>
         </select>
       </div>

@@ -117,9 +117,9 @@ const Upload = (props) => {
       .then((data) => {
         updateActivity(job._id);
         getJobs(job._id);
-        chooseToast(res, type);
       })
       .catch((err) => console.log(err));
+    chooseToast(res, type);
   };
 
   return (
